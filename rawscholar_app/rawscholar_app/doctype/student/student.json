@@ -1,27 +1,125 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "creation": "2023-12-08 16:01:04.979844",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_35sa",
-  "name1"
+  "name1",
+  "address",
+  "dob",
+  "gender",
+  "email",
+  "phone",
+  "qualification",
+  "photo",
+  "passport_no",
+  "amended_from",
+  "column_break_feft",
+  "note_1",
+  "add",
+  "note_2",
+  "add1",
+  "note_3"
  ],
  "fields": [
-  {
-   "fieldname": "section_break_35sa",
-   "fieldtype": "Section Break"
-  },
   {
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Data",
+   "label": "DOB"
+  },
+  {
+   "default": "Male",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale\nNot Specified"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "qualification",
+   "fieldtype": "Data",
+   "label": "Qualification"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "passport_no",
+   "fieldtype": "Data",
+   "label": "Passport No"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Student",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "note_1",
+   "fieldtype": "Small Text",
+   "label": "Note 1"
+  },
+  {
+   "depends_on": "add",
+   "fieldname": "note_2",
+   "fieldtype": "Small Text",
+   "label": "Note 2"
+  },
+  {
+   "depends_on": "add1",
+   "fieldname": "note_3",
+   "fieldtype": "Small Text",
+   "label": "Note 3"
+  },
+  {
+   "fieldname": "column_break_feft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "add",
+   "fieldtype": "Check",
+   "label": "Add"
+  },
+  {
+   "default": "0",
+   "depends_on": "add",
+   "fieldname": "add1",
+   "fieldtype": "Check",
+   "label": "Add1"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-12-08 16:01:24.490427",
+ "modified": "2023-12-08 17:02:47.525852",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
@@ -43,5 +141,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1
+ "track_changes": 1,
+ "track_seen": 1
 }
