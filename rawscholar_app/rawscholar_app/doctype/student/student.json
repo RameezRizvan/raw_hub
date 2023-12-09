@@ -16,12 +16,16 @@
   "photo",
   "passport_no",
   "amended_from",
+  "task",
   "column_break_feft",
   "note_1",
+  "date1",
   "add",
   "note_2",
+  "date2",
   "add1",
-  "note_3"
+  "note_3",
+  "date3"
  ],
  "fields": [
   {
@@ -114,12 +118,38 @@
    "fieldname": "add1",
    "fieldtype": "Check",
    "label": "Add1"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date1",
+   "fieldtype": "Datetime",
+   "label": "Date1"
+  },
+  {
+   "default": "Now",
+   "depends_on": "add",
+   "fieldname": "date2",
+   "fieldtype": "Datetime",
+   "label": "Date2"
+  },
+  {
+   "default": "Now",
+   "depends_on": "add1",
+   "fieldname": "date3",
+   "fieldtype": "Datetime",
+   "label": "Date3"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-08 17:02:47.525852",
+ "modified": "2023-12-09 11:27:00.519791",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
