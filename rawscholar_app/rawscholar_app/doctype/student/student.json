@@ -1,4 +1,5 @@
 {
+ "_comments": "[{\"comment\": \"<div class=\\\"ql-editor read-mode\\\"><p>mbmnnm,n</p></div>\", \"by\": \"Administrator\", \"name\": \"63cca61397\"}]",
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
@@ -18,14 +19,8 @@
   "amended_from",
   "task",
   "column_break_feft",
-  "note_1",
-  "date1",
-  "add",
-  "note_2",
-  "date2",
-  "add1",
-  "note_3",
-  "date3"
+  "notes",
+  "files"
  ],
  "fields": [
   {
@@ -40,7 +35,7 @@
   },
   {
    "fieldname": "dob",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "DOB"
   },
   {
@@ -86,38 +81,8 @@
    "search_index": 1
   },
   {
-   "fieldname": "note_1",
-   "fieldtype": "Small Text",
-   "label": "Note 1"
-  },
-  {
-   "depends_on": "add",
-   "fieldname": "note_2",
-   "fieldtype": "Small Text",
-   "label": "Note 2"
-  },
-  {
-   "depends_on": "add1",
-   "fieldname": "note_3",
-   "fieldtype": "Small Text",
-   "label": "Note 3"
-  },
-  {
    "fieldname": "column_break_feft",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "add",
-   "fieldtype": "Check",
-   "label": "Add"
-  },
-  {
-   "default": "0",
-   "depends_on": "add",
-   "fieldname": "add1",
-   "fieldtype": "Check",
-   "label": "Add1"
   },
   {
    "fieldname": "task",
@@ -126,30 +91,21 @@
    "options": "Task"
   },
   {
-   "default": "Now",
-   "fieldname": "date1",
-   "fieldtype": "Datetime",
-   "label": "Date1"
+   "fieldname": "files",
+   "fieldtype": "Table",
+   "label": "Files",
+   "options": "Attachments"
   },
   {
-   "default": "Now",
-   "depends_on": "add",
-   "fieldname": "date2",
-   "fieldtype": "Datetime",
-   "label": "Date2"
-  },
-  {
-   "default": "Now",
-   "depends_on": "add1",
-   "fieldname": "date3",
-   "fieldtype": "Datetime",
-   "label": "Date3"
+   "fieldname": "notes",
+   "fieldtype": "Table",
+   "label": "Notes",
+   "options": "Notes"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-12-09 11:27:00.519791",
+ "modified": "2023-12-09 12:52:46.410212",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
@@ -168,9 +124,11 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "name1",
  "track_changes": 1,
  "track_seen": 1
 }
