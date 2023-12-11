@@ -11,16 +11,22 @@
   "address",
   "dob",
   "gender",
+  "column_break_wxbf",
   "email",
   "phone",
   "qualification",
-  "photo",
   "passport_no",
   "amended_from",
-  "task",
   "column_break_feft",
+  "country_tab",
+  "country",
+  "notes_tab",
   "notes",
-  "files"
+  "files_tab",
+  "photo",
+  "files",
+  "tasks_tab",
+  "task"
  ],
  "fields": [
   {
@@ -101,11 +107,41 @@
    "fieldtype": "Table",
    "label": "Notes",
    "options": "Notes"
+  },
+  {
+   "fieldname": "column_break_wxbf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "files_tab",
+   "fieldtype": "Tab Break",
+   "label": "Files"
+  },
+  {
+   "fieldname": "tasks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tasks"
+  },
+  {
+   "fieldname": "country_tab",
+   "fieldtype": "Tab Break",
+   "label": "Country"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Table",
+   "label": "Country",
+   "options": "Countries"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-09 12:52:46.410212",
+ "modified": "2023-12-11 11:33:49.976001",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
