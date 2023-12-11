@@ -26,7 +26,9 @@
   "photo",
   "files",
   "tasks_tab",
-  "task"
+  "task",
+  "payments_tab",
+  "payments"
  ],
  "fields": [
   {
@@ -137,11 +139,23 @@
    "fieldtype": "Table",
    "label": "Country",
    "options": "Countries"
+  },
+  {
+   "fieldname": "payments_tab",
+   "fieldtype": "Tab Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "payments",
+   "fieldtype": "Table",
+   "label": "Payments",
+   "link_filters": "[]",
+   "options": "Payment"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 11:33:49.976001",
+ "modified": "2023-12-11 15:55:32.066067",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
@@ -160,6 +174,7 @@
    "write": 1
   }
  ],
+ "search_fields": "name1",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

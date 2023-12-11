@@ -16,7 +16,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 11:40:57.578430",
+ "modified": "2023-12-11 12:23:59.370127",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Country List",
@@ -35,6 +35,7 @@
    "write": 1
   }
  ],
+ "search_fields": "country",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
