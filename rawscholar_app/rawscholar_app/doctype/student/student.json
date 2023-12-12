@@ -1,7 +1,7 @@
 {
- "_comments": "[{\"comment\": \"<div class=\\\"ql-editor read-mode\\\"><p>mbmnnm,n</p></div>\", \"by\": \"Administrator\", \"name\": \"63cca61397\"}]",
  "actions": [],
  "allow_guest_to_view": 1,
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2023-12-08 16:01:04.979844",
  "doctype": "DocType",
@@ -155,7 +155,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-12 11:23:05.910547",
+ "modified": "2023-12-12 19:07:27.747632",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
