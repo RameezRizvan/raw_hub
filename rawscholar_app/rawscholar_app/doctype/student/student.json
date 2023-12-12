@@ -150,12 +150,12 @@
    "fieldtype": "Table",
    "label": "Payments",
    "link_filters": "[]",
-   "options": "Payment"
+   "options": "Payment List"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 15:55:32.066067",
+ "modified": "2023-12-12 11:23:05.910547",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
