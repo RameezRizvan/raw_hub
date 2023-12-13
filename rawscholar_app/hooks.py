@@ -6,6 +6,11 @@ app_email = "tech@faatlab.com"
 app_license = "unlicense"
 # required_apps = []
 
+fixtures = [
+    {"dt":"Attachment Type"},
+    "Country List"
+]
+
 # Includes in <head>
 # ------------------
 

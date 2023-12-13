@@ -1,0 +1,345 @@
+[
+ {
+  "country": "UK",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:52:26.367500",
+  "name": "3f01080a7b"
+ },
+ {
+  "country": "Austria",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:53:16.337061",
+  "name": "b6d1a2beeb"
+ },
+ {
+  "country": "Lithuania",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:54:23.433676",
+  "name": "c825606103"
+ },
+ {
+  "country": "Italy",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:54:42.019112",
+  "name": "879788e85b"
+ },
+ {
+  "country": "Netherlands",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:55:20.215446",
+  "name": "6731d787f2"
+ },
+ {
+  "country": "Switzerland",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:55:36.896806",
+  "name": "c8777ca0a5"
+ },
+ {
+  "country": "Greece",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:55:48.189825",
+  "name": "103b3b4b61"
+ },
+ {
+  "country": "Poland",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:56:00.173963",
+  "name": "c667713880"
+ },
+ {
+  "country": "Ukraine",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:56:16.869637",
+  "name": "5f0333d764"
+ },
+ {
+  "country": "Belgium",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:56:30.649880",
+  "name": "bf5233081d"
+ },
+ {
+  "country": "Norway",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:56:43.343644",
+  "name": "3f0c9aead9"
+ },
+ {
+  "country": "Sweden",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:56:54.099479",
+  "name": "3995636263"
+ },
+ {
+  "country": "Romania",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:57:06.021427",
+  "name": "04db6a1b1a"
+ },
+ {
+  "country": "Ireland",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:57:18.058898",
+  "name": "f9c60102c4"
+ },
+ {
+  "country": "Denmark",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:57:30.158731",
+  "name": "54ba4eb050"
+ },
+ {
+  "country": "Croatia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:57:43.477307",
+  "name": "8f8086f110"
+ },
+ {
+  "country": "Finland",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:58:01.064444",
+  "name": "d23acbdfe7"
+ },
+ {
+  "country": "Iceland",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:58:11.668800",
+  "name": "22df3ebd26"
+ },
+ {
+  "country": "Czechia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:58:46.182984",
+  "name": "5bf0cf59f7"
+ },
+ {
+  "country": "Albania",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:58:57.033929",
+  "name": "f0574a2688"
+ },
+ {
+  "country": "Malta",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:59:04.813369",
+  "name": "1764614e4e"
+ },
+ {
+  "country": "Luxembourg",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:59:25.789807",
+  "name": "f24f7e5f41"
+ },
+ {
+  "country": "Hungary",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:59:35.945392",
+  "name": "6d7ea3b16e"
+ },
+ {
+  "country": "Serbia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:59:43.952079",
+  "name": "a000aa5a9f"
+ },
+ {
+  "country": "Cyprus",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 13:59:58.959239",
+  "name": "754413d861"
+ },
+ {
+  "country": "Bulgaria",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 14:00:11.067723",
+  "name": "6884368a20"
+ },
+ {
+  "country": "Liechtenstein",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 14:00:38.949908",
+  "name": "6b1453eba3"
+ },
+ {
+  "country": "Slovenia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 14:59:54.778471",
+  "name": "f0696c2f2f"
+ },
+ {
+  "country": "Slovakia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:00:05.348483",
+  "name": "32760f73ff"
+ },
+ {
+  "country": "Estonia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:00:17.253590",
+  "name": "7bf8bdf2cf"
+ },
+ {
+  "country": "Lithuania",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:00:31.234957",
+  "name": "406cc5cc39"
+ },
+ {
+  "country": "Monaco",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:00:43.700511",
+  "name": "8abfd50a70"
+ },
+ {
+  "country": "Vatican City",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:00:58.603563",
+  "name": "33c935edbf"
+ },
+ {
+  "country": "Kosovo",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:01:11.526419",
+  "name": "5b66d13f08"
+ },
+ {
+  "country": "North Macedonia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:01:30.519263",
+  "name": "5c63f3e01b"
+ },
+ {
+  "country": "Andorra",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:01:53.529203",
+  "name": "1f1b527540"
+ },
+ {
+  "country": "Belarus",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:02:16.360821",
+  "name": "ced85ad4e4"
+ },
+ {
+  "country": "Moldova",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:02:35.689899",
+  "name": "ee4f16a64e"
+ },
+ {
+  "country": "Montenegro",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:02:56.984299",
+  "name": "9258ad42c8"
+ },
+ {
+  "country": "Latvia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:03:06.210973",
+  "name": "62149f2915"
+ },
+ {
+  "country": "Gibraltar",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:03:23.311063",
+  "name": "f554581b67"
+ },
+ {
+  "country": "San Marino",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:03:36.022212",
+  "name": "56c70aaf3a"
+ },
+ {
+  "country": "Jersey",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:03:47.639459",
+  "name": "bdc4eddc0a"
+ },
+ {
+  "country": "Isle of Man",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-13 15:04:04.892514",
+  "name": "bf1787c292"
+ },
+ {
+  "country": "France",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-11 11:41:23.452792",
+  "name": "61217fb15d"
+ },
+ {
+  "country": "Germany",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-11 11:40:30.076233",
+  "name": "46c54bcef6"
+ },
+ {
+  "country": "Australia",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-11 11:42:10.712518",
+  "name": "79fddf032a"
+ },
+ {
+  "country": "Canada",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-11 11:41:10.899313",
+  "name": "dd0bf0ae2e"
+ },
+ {
+  "country": "USA",
+  "docstatus": 0,
+  "doctype": "Country List",
+  "modified": "2023-12-11 11:48:47.432292",
+  "name": "c6752bd63a"
+ }
+]
