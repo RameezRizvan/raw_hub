@@ -1,17 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-12-08 17:14:55.813120",
+ "creation": "2023-12-13 11:59:11.828162",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "title",
-  "status",
-  "todo",
-  "created_on",
-  "due_date",
-  "student",
-  "creator"
+  "amount",
+  "date",
+  "student"
  ],
  "fields": [
   {
@@ -20,47 +17,28 @@
    "label": "Title"
   },
   {
-   "fieldname": "todo",
-   "fieldtype": "Small Text",
-   "label": "ToDo"
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
   },
   {
-   "default": "Today",
-   "fieldname": "created_on",
+   "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Created On"
-  },
-  {
-   "fieldname": "due_date",
-   "fieldtype": "Date",
-   "label": "Due Date"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Pending\nOn Going\nCompleted\nCancelled"
+   "label": "Date"
   },
   {
    "fieldname": "student",
    "fieldtype": "Link",
    "label": "Student",
-   "options": "Student",
-   "search_index": 1
-  },
-  {
-   "fieldname": "creator",
-   "fieldtype": "Data",
-   "label": "Creator",
-   "read_only": 1
+   "options": "Student"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-13 13:35:00.873346",
+ "modified": "2023-12-13 12:26:16.170756",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
- "name": "Task",
+ "name": "Payments",
  "owner": "Administrator",
  "permissions": [
   {
@@ -80,6 +58,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "title",
- "track_changes": 1
+ "title_field": "title"
 }

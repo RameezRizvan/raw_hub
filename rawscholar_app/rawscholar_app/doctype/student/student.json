@@ -17,7 +17,6 @@
   "qualification",
   "passport_no",
   "amended_from",
-  "column_break_feft",
   "country_tab",
   "country",
   "notes_tab",
@@ -25,10 +24,9 @@
   "files_tab",
   "photo",
   "files",
-  "tasks_tab",
+  "section_break_alqj",
   "task",
-  "payments_tab",
-  "payments"
+  "others"
  ],
  "fields": [
   {
@@ -47,11 +45,10 @@
    "label": "DOB"
   },
   {
-   "default": "Male",
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "Male\nFemale\nNot Specified"
+   "options": "Male\nFemale"
   },
   {
    "fieldname": "email",
@@ -89,10 +86,6 @@
    "search_index": 1
   },
   {
-   "fieldname": "column_break_feft",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "task",
    "fieldtype": "Link",
    "label": "Task",
@@ -125,11 +118,6 @@
    "label": "Files"
   },
   {
-   "fieldname": "tasks_tab",
-   "fieldtype": "Tab Break",
-   "label": "Tasks"
-  },
-  {
    "fieldname": "country_tab",
    "fieldtype": "Tab Break",
    "label": "Country"
@@ -141,21 +129,29 @@
    "options": "Countries"
   },
   {
-   "fieldname": "payments_tab",
-   "fieldtype": "Tab Break",
-   "label": "Payments"
+   "fieldname": "section_break_alqj",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "payments",
-   "fieldtype": "Table",
-   "label": "Payments",
-   "link_filters": "[]",
-   "options": "Payment List"
+   "fieldname": "others",
+   "fieldtype": "Tab Break",
+   "label": "Others",
+   "show_dashboard": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-12-12 19:07:27.747632",
+ "links": [
+  {
+   "link_doctype": "Payments",
+   "link_fieldname": "Student",
+   "table_fieldname": "Payment"
+  },
+  {
+   "link_doctype": "Task",
+   "link_fieldname": "Student"
+  }
+ ],
+ "modified": "2023-12-13 12:50:58.933411",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
