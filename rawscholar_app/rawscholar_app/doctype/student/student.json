@@ -11,6 +11,7 @@
   "address",
   "dob",
   "gender",
+  "status",
   "column_break_wxbf",
   "email",
   "phone",
@@ -137,6 +138,12 @@
    "fieldtype": "Tab Break",
    "label": "Others",
    "show_dashboard": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nCounselling Ongoing\nApplication Processing\nNot Interested\nCompleted"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -151,7 +158,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2023-12-13 12:50:58.933411",
+ "modified": "2023-12-14 10:48:00.750515",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
