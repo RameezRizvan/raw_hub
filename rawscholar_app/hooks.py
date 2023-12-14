@@ -8,7 +8,9 @@ app_license = "unlicense"
 
 fixtures = [
     {"dt":"Attachment Type"},
-    "Country List"
+    {"dt":"Country List"},
+    {"dt":"Print Format"},
+    {"dt":"Number Card"}
 ]
 
 # Includes in <head>
