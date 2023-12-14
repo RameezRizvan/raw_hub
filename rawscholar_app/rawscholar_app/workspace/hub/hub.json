@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"6L0V68wM2o\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Lists <br></b></span>\",\"col\":12}},{\"id\":\"7p2-TuL8vy\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Students\",\"col\":6}},{\"id\":\"zIb8jLk8NJ\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Tasks\",\"col\":6}},{\"id\":\"m2U0GjPzuU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OnPboPM_01\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"> Shortcuts<br></span>\",\"col\":6}},{\"id\":\"ZAPHWeHNWS\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"qsIbhzg0We\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Students\",\"col\":3}},{\"id\":\"o0hc9nHwET\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Payments\",\"col\":3}},{\"id\":\"kNTkXlhUVV\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"XXyskRpXAX\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"nEnfnLdkoV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tasks\",\"col\":3}},{\"id\":\"PcVV5l4UxC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Country\",\"col\":3}}]",
+ "content": "[{\"id\":\"OnPboPM_01\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"> Shortcuts<br></span>\",\"col\":12}},{\"id\":\"qsIbhzg0We\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Students\",\"col\":4}},{\"id\":\"o0hc9nHwET\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Payments\",\"col\":4}},{\"id\":\"nEnfnLdkoV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tasks\",\"col\":4}},{\"id\":\"m2U0GjPzuU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"6L0V68wM2o\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Lists <br></b></span>\",\"col\":12}},{\"id\":\"7p2-TuL8vy\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Students\",\"col\":6}},{\"id\":\"zIb8jLk8NJ\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Tasks\",\"col\":6}},{\"id\":\"ZAPHWeHNWS\",\"type\":\"spacer\",\"data\":{\"col\":6}},{\"id\":\"kNTkXlhUVV\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"XXyskRpXAX\",\"type\":\"spacer\",\"data\":{\"col\":3}}]",
  "creation": "2023-12-13 15:39:12.027553",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Hub",
  "links": [],
- "modified": "2023-12-14 14:22:26.393839",
+ "modified": "2023-12-14 14:30:53.165139",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Hub",
@@ -25,10 +25,6 @@
   {
    "label": "Students",
    "number_card_name": "Student"
-  },
-  {
-   "label": "Country",
-   "number_card_name": "Country"
   },
   {
    "label": "Tasks",
