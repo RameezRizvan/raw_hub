@@ -18,6 +18,7 @@
   "qualification",
   "passport_no",
   "amended_from",
+  "source",
   "country_tab",
   "country",
   "notes_tab",
@@ -31,7 +32,9 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "address",
@@ -47,7 +50,7 @@
    "fieldname": "gender",
    "fieldtype": "Select",
    "label": "Gender",
-   "options": "Male\nFemale"
+   "options": "--select--\nMale\nFemale"
   },
   {
    "fieldname": "email",
@@ -132,6 +135,12 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Open\nCounselling Ongoing\nApplication Processing\nNot Interested\nCompleted"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "--select--\nWalk-In\nInstagram\nFacebook\nCall\nCompany Website"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -146,7 +155,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2023-12-15 10:37:51.041391",
+ "modified": "2023-12-18 15:51:16.531113",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
