@@ -31,6 +31,7 @@
    "label": "Created On"
   },
   {
+   "default": "Today",
    "fieldname": "due_date",
    "fieldtype": "Date",
    "label": "Due Date"
@@ -57,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-13 13:35:00.873346",
+ "modified": "2023-12-15 10:44:00.110435",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Task",
