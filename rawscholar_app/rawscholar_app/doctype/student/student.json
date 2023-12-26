@@ -140,7 +140,7 @@
    "fieldname": "source",
    "fieldtype": "Select",
    "label": "Source",
-   "options": "--select--\nWalk-In\nInstagram\nFacebook\nCall\nCompany Website"
+   "options": "--select--\nWalk-In\nInstagram\nFacebook\nCall\nCompany Website\nImported"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -155,7 +155,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2023-12-22 11:40:40.322883",
+ "modified": "2023-12-22 12:22:43.326151",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
