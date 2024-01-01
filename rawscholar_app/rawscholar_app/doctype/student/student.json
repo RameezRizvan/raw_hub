@@ -12,13 +12,13 @@
   "dob",
   "gender",
   "status",
+  "source",
   "column_break_wxbf",
   "email",
   "phone",
-  "qualification",
+  "qualifications",
   "passport_no",
   "amended_from",
-  "source",
   "country_tab",
   "country",
   "notes_tab",
@@ -61,11 +61,6 @@
    "fieldname": "phone",
    "fieldtype": "Data",
    "label": "Phone"
-  },
-  {
-   "fieldname": "qualification",
-   "fieldtype": "Data",
-   "label": "Qualification"
   },
   {
    "fieldname": "photo",
@@ -141,6 +136,12 @@
    "fieldtype": "Select",
    "label": "Source",
    "options": "--select--\nWalk-In\nInstagram\nFacebook\nCall\nCompany Website\nImported"
+  },
+  {
+   "fieldname": "qualifications",
+   "fieldtype": "Table",
+   "label": "Qualifications",
+   "options": "Qualification"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -155,7 +156,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2023-12-22 12:22:43.326151",
+ "modified": "2024-01-01 11:29:59.803055",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",

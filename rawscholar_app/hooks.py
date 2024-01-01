@@ -10,7 +10,9 @@ fixtures = [
     {"dt":"Attachment Type"},
     {"dt":"Country List"},
     {"dt":"Print Format"},
-    {"dt":"Number Card"}
+    {"dt":"Number Card"},
+    {"dt":"Letter Head"},
+    {"dt":"Qualification Type"},
 ]
 
 # Includes in <head>

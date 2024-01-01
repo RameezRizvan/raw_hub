@@ -1,0 +1,37 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Qualification Type",
+  "modified": "2024-01-01 11:12:42.905601",
+  "name": "4959c58066",
+  "qualification": "10th"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Qualification Type",
+  "modified": "2024-01-01 11:13:31.427414",
+  "name": "50e9709126",
+  "qualification": "Plus Two"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Qualification Type",
+  "modified": "2024-01-01 11:14:14.089489",
+  "name": "ffcd15b99e",
+  "qualification": "Degree"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Qualification Type",
+  "modified": "2024-01-01 11:16:00.688807",
+  "name": "0cc14e9c65",
+  "qualification": "Post Graduate"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Qualification Type",
+  "modified": "2024-01-01 11:16:11.379015",
+  "name": "a717964e62",
+  "qualification": "Diploma"
+ }
+]
