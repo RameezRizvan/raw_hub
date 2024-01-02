@@ -154,9 +154,13 @@
   {
    "link_doctype": "Task",
    "link_fieldname": "Student"
+  },
+  {
+   "link_doctype": "Application",
+   "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-01 11:29:59.803055",
+ "modified": "2024-01-02 15:50:20.043188",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",

@@ -7,8 +7,8 @@
  "field_order": [
   "student",
   "country",
-  "course",
   "university",
+  "course",
   "intake_date",
   "intake"
  ],
@@ -21,9 +21,9 @@
   },
   {
    "fieldname": "country",
-   "fieldtype": "Table",
+   "fieldtype": "Link",
    "label": "Country",
-   "options": "Countries"
+   "options": "Country List"
   },
   {
    "fieldname": "course",
@@ -38,7 +38,7 @@
   {
    "fieldname": "intake_date",
    "fieldtype": "Date",
-   "label": "Intake Date"
+   "label": "Intake"
   },
   {
    "fieldname": "intake",
@@ -49,7 +49,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-12 13:00:10.231048",
+ "modified": "2024-01-02 15:56:56.895360",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Application",
