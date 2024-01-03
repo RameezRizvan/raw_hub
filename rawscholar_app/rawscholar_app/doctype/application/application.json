@@ -8,9 +8,11 @@
   "student",
   "country",
   "university",
+  "column_break_gqdq",
   "course",
   "intake_date",
-  "intake"
+  "intake",
+  "status"
  ],
  "fields": [
   {
@@ -45,11 +47,21 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Intake"
+  },
+  {
+   "fieldname": "column_break_gqdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "--Select--\nApplication Processing\nOffer Letter Processing\nOffer Letter Rejected\nOffer Letter Accepted\nVisa Processing\nVisa Rejected\nVisa Approved\nSuccessfully Enrolled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-02 15:56:56.895360",
+ "modified": "2024-01-03 11:53:24.593239",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Application",
