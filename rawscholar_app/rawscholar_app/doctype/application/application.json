@@ -56,12 +56,12 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "--Select--\nApplication Processing\nOffer Letter Processing\nOffer Letter Rejected\nOffer Letter Accepted\nVisa Processing\nVisa Rejected\nVisa Approved\nSuccessfully Enrolled"
+   "options": "--Select--\nApplication Processing\nApplication Rejected\nOffer Letter Processing\nOffer Letter Rejected\nOffer Letter Accepted\nVisa Processing\nVisa Rejected\nVisa Approved\nSuccessfully Enrolled"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-03 11:53:24.593239",
+ "modified": "2024-01-03 13:03:02.868574",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Application",
