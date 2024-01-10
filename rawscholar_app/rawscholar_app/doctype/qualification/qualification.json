@@ -6,14 +6,17 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "column_break_zhxa",
   "qualification",
   "cgpa",
   "percentage_"
  ],
  "fields": [
   {
+   "columns": 2,
    "fieldname": "qualification",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Qualification",
    "options": "Qualification Type"
   },
@@ -26,12 +29,17 @@
    "fieldname": "percentage_",
    "fieldtype": "Data",
    "label": "Percentage %"
+  },
+  {
+   "columns": 3,
+   "fieldname": "column_break_zhxa",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-01 11:55:21.706735",
+ "modified": "2024-01-10 17:04:15.164379",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Qualification",

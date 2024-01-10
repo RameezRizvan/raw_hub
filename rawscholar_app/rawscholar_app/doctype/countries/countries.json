@@ -10,8 +10,10 @@
  ],
  "fields": [
   {
+   "columns": 3,
    "fieldname": "country",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Country",
    "options": "Country List"
   }
@@ -19,7 +21,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-12-11 11:45:02.171113",
+ "modified": "2024-01-10 17:06:52.450888",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Countries",

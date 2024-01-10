@@ -9,14 +9,16 @@
  ],
  "fields": [
   {
+   "columns": 3,
    "fieldname": "country",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Country"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 12:23:59.370127",
+ "modified": "2024-01-10 17:06:11.082796",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Country List",

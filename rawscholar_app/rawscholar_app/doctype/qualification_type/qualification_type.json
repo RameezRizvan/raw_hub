@@ -5,20 +5,31 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_mlty",
+  "column_break_nlyn",
   "qualification"
  ],
  "fields": [
   {
+   "columns": 3,
    "fieldname": "qualification",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Qualification",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_mlty",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nlyn",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-01 11:13:13.303779",
+ "modified": "2024-01-10 17:02:42.788805",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Qualification Type",
