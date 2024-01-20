@@ -5,12 +5,12 @@ stages:
 deploy-job:      
   stage: deploy  
   only:
-    - devops/ci-cd
+    - master
   script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - echo "$HUB_SSH_KEY" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
-    - ssh ubuntu@$HUB_SSH_HOST 'cd ~/rawscholar-bench && ls'
+    - ssh ubuntu@$HUB_SSH_HOST 'cd ~/rawscholar-bench && bench update'
 
