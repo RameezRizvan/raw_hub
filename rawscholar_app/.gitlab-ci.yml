@@ -1,0 +1,17 @@
+image: 
+  name: kroniak/ssh-client
+stages:
+  - deploy
+deploy-job:      
+  stage: deploy  
+  environment: production
+  # only:
+  #   - master
+  script:
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - echo "$HUB_SSH_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh $HUB_SSH_HOST 'cd ~/rawscholar-bench && ls'
+
