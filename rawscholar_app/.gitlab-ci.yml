@@ -4,9 +4,8 @@ stages:
   - deploy
 deploy-job:      
   stage: deploy  
-  environment: production
-  # only:
-  #   - master
+  only:
+    - devops/ci-cd
   script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
