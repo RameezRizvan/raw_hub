@@ -12,13 +12,13 @@ deploy-job:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - echo "$HUB_SSH_KEY" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
-    - ssh ubuntu@$HUB_SSH_HOST 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash'
-    - ssh ubuntu@$HUB_SSH_HOST 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
-    -     - ssh ubuntu@$HUB_SSH_HOST 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && export PATH="$NVM_DIR/versions/node/$(nvm current)/bin:$PATH" && nvm use 20 && node --version'
-    - ssh ubuntu@$HUB_SSH_HOST 'nvm install 20'
-    - ssh ubuntu@$HUB_SSH_HOST 'nvm use 20'
-    - ssh ubuntu@$HUB_SSH_HOST 'export PATH="$NVM_DIR/versions/node/v$(nvm current)/bin:$PATH"'
-    - ssh ubuntu@$HUB_SSH_HOST 'node --version'
-    - ssh ubuntu@$HUB_SSH_HOST 'nvm -v'
-    - ssh ubuntu@$HUB_SSH_HOST 'bash -c "cd ~/rawscholar-bench && sudo bench update"'
+    - ssh ubuntu@$HUB_SSH_HOST 'bash -s' << 'EOF'
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      export PATH="$NVM_DIR/versions/node/$(nvm current)/bin:$PATH"
+      nvm use 20
+      node --version
+      cd ~/rawscholar-bench 
+      sudo bench update
+      EOF
 
