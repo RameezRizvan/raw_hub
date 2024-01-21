@@ -14,5 +14,6 @@ deploy-job:
     - chmod 600 ~/.ssh/id_rsa
     - ssh ubuntu@$HUB_SSH_HOST 'export PATH="/home/ubuntu/.nvm/versions/node/v20.10.0/bin:$PATH"'
     - ssh ubuntu@$HUB_SSH_HOST 'echo $PATH'
+    - ssh ubuntu@$HUB_SSH_HOST 'nvm -v
     - ssh ubuntu@$HUB_SSH_HOST 'bash -c "cd ~/rawscholar-bench && sudo bench update"'
 
