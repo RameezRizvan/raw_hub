@@ -13,14 +13,13 @@
   "gender",
   "status",
   "source",
+  "country",
   "column_break_wxbf",
   "email",
   "phone",
   "qualifications",
   "passport_no",
   "amended_from",
-  "country_tab",
-  "country",
   "notes_tab",
   "notes",
   "files_tab",
@@ -109,13 +108,8 @@
    "label": "Files"
   },
   {
-   "fieldname": "country_tab",
-   "fieldtype": "Tab Break",
-   "label": "Country"
-  },
-  {
    "fieldname": "country",
-   "fieldtype": "Table",
+   "fieldtype": "Table MultiSelect",
    "label": "Country",
    "options": "Countries"
   },
@@ -160,7 +154,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-05 11:31:06.488747",
+ "modified": "2024-01-22 12:56:42.841867",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
