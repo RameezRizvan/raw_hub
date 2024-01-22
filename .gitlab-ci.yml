@@ -4,6 +4,7 @@ stages:
   - deploy
 deploy-job:      
   stage: deploy  
+  when: never
   only:
     - master
   script:
