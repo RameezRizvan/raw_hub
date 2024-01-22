@@ -12,7 +12,7 @@ deploy-job:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - echo "$HUB_SSH_KEY" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
-    - ssh ubuntu@$HUB_SSH_HOST 'cat ~/.bashrc && echo $PATH'
+    - ssh ubuntu@$HUB_SSH_HOST 'source ~/.bashrc && echo $NVM_DIR'
     #- ssh ubuntu@$HUB_SSH_HOST 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && export PATH="$NVM_DIR/versions/node/$(nvm current)/bin:$PATH" && nvm use 20 && node --version && cd ~/rawscholar-bench && node --version && sudo bench update'
 
 
