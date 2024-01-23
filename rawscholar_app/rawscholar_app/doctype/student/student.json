@@ -22,6 +22,7 @@
   "amended_from",
   "notes_tab",
   "notes",
+  "notes_html",
   "files_tab",
   "photo",
   "files",
@@ -90,6 +91,7 @@
   {
    "fieldname": "notes",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Notes",
    "options": "Notes"
   },
@@ -136,6 +138,11 @@
    "fieldtype": "Table",
    "label": "Qualifications",
    "options": "Qualification"
+  },
+  {
+   "fieldname": "notes_html",
+   "fieldtype": "HTML",
+   "label": "Notes HTML"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -154,7 +161,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-22 12:56:42.841867",
+ "modified": "2024-01-23 21:33:44.402007",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
