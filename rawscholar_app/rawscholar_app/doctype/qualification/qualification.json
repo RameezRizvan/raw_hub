@@ -9,7 +9,8 @@
   "column_break_zhxa",
   "qualification",
   "cgpa",
-  "percentage_"
+  "percentage",
+  "completion_year"
  ],
  "fields": [
   {
@@ -17,29 +18,43 @@
    "fieldname": "qualification",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Qualification",
+   "label": "Level",
    "options": "Qualification Type"
   },
   {
    "fieldname": "cgpa",
-   "fieldtype": "Data",
-   "label": "CGPA"
-  },
-  {
-   "fieldname": "percentage_",
-   "fieldtype": "Data",
-   "label": "Percentage %"
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "CGPA",
+   "non_negative": 1,
+   "precision": "2"
   },
   {
    "columns": 3,
    "fieldname": "column_break_zhxa",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "completion_year",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Year of Completion",
+   "length": 4,
+   "non_negative": 1
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "%",
+   "non_negative": 1,
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-01-10 17:04:15.164379",
+ "modified": "2024-01-24 12:18:19.723543",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Qualification",
