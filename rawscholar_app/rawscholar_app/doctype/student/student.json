@@ -125,7 +125,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nRegistered\nInterested\nNot Interested\nNot Responding\nCounselling Ongoing\nApplication Processing\nFuture Follow Up\nCall Later"
+   "options": "Open\nRegistered\nInterested\nNot Interested\nNot Responding\nCounselling Ongoing\nApplication Processing\nFuture Follow Up\nCall Later\nRepetitive Lead"
   },
   {
    "fieldname": "source",
@@ -161,7 +161,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-23 21:33:44.402007",
+ "modified": "2024-01-25 10:23:05.059092",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
