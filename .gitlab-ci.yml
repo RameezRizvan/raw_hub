@@ -5,7 +5,7 @@ stages:
 deploy-job:      
   stage: deploy  
   only:
-    - develop
+    - master
   script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
