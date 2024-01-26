@@ -12,7 +12,6 @@ deploy-job:
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - echo "$HUB_SSH_KEY" > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
-    - ssh ubuntu@$HUB_SSH_HOST 'node -v'
     - ssh ubuntu@$HUB_SSH_HOST 'cd rawscholar-bench && bench update'
 
 
