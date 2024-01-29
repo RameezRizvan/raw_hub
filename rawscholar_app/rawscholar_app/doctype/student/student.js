@@ -129,4 +129,103 @@ frappe.ui.form.on("Student", {
       },
     });
   },
+
+
+
+
+  // activities
+  refresh: function (frm) {
+		var me = this;
+		// $(this.open_activities_wrapper).empty();
+		// let cur_form_footer = this.form_wrapper.find('.form-footer');
+
+		// all activities
+		if (!$(this.all_activities_wrapper).find('.form-footer').length) {
+			this.all_activities_wrapper.empty();
+			$(cur_form_footer).appendTo(this.all_activities_wrapper);
+
+			// remove frappe-control class to avoid absolute position for action-btn
+			$(this.all_activities_wrapper).removeClass('frappe-control');
+			// hide new event button
+			$('.timeline-actions').find('.btn-default').hide();
+			// hide new comment box
+			$(".comment-box").hide();
+			// show only communications by default
+			$($('.timeline-content').find('.nav-link')[0]).tab('show');
+		}
+
+		// open activities
+		frappe.call({
+			method: "get_open_activities",
+			args: {
+				ref_doctype: this.frm.doc.doctype,
+				ref_docname: this.frm.doc.name
+			},
+			callback: (r) => {
+				if (!r.exc) {
+					var activities_html = frappe.render_template('activities', {
+						tasks: r.message.tasks,
+						events: r.message.events
+					});
+
+					$(activities_html).appendTo(me.open_activities_wrapper);
+
+					$(".open-tasks").find(".completion-checkbox").on("click", function() {
+						me.update_status(this, "ToDo");
+					});
+
+					$(".open-events").find(".completion-checkbox").on("click", function() {
+						me.update_status(this, "Event");
+					});
+
+					me.create_task();
+					me.create_event();
+				}
+			}
+		});
+	},
+
+	create_task (frm) {
+		// let me = this;
+		let _create_task = () => {
+			const args = {
+				doc: me.frm.doc,
+				frm: me.frm,
+				title: __("New Task")
+			};
+			let composer = new frappe.views.InteractionComposer(args);
+			composer.dialog.get_field('interaction_type').set_value("ToDo");
+			// hide column having interaction type field
+			$(composer.dialog.get_field('interaction_type').wrapper).closest('.form-column').hide();
+			// hide summary field
+			$(composer.dialog.get_field('summary').wrapper).closest('.form-section').hide();
+		};
+		$(".new-task-btn").click(_create_task);
+	},
+
+	create_event (frm) {
+		// let me = this;
+    const edit_btn = frm.edit_btn;
+		let _create_event = () => {
+			const args = {
+				doc: me.frm.doc,
+				frm: me.frm,
+				title: __("New Event")
+			};
+			let composer = new frappe.views.InteractionComposer(args);
+			composer.dialog.get_field('interaction_type').set_value("Event");
+			$(composer.dialog.get_field('interaction_type').wrapper).hide();
+		};
+		$(".new-event-btn").click(_create_event);
+	},
+
+	async update_status (input_field, doctype) {
+		let completed = $(input_field).prop("checked") ? 1 : 0;
+		let docname = $(input_field).attr("name");
+		if (completed) {
+			await frappe.db.set_value(doctype, docname, "status", "Closed");
+			this.refresh();
+		}
+	},  
+
 });

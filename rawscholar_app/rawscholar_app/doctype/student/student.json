@@ -26,7 +26,11 @@
   "files_tab",
   "photo",
   "files",
-  "others"
+  "others",
+  "activities_tab",
+  "open_activities_html",
+  "all_activities_section",
+  "all_activities_html"
  ],
  "fields": [
   {
@@ -143,6 +147,26 @@
    "fieldname": "notes_html",
    "fieldtype": "HTML",
    "label": "Notes HTML"
+  },
+  {
+   "fieldname": "activities_tab",
+   "fieldtype": "Tab Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "open_activities_html",
+   "fieldtype": "HTML",
+   "label": "Open Activities HTML"
+  },
+  {
+   "fieldname": "all_activities_section",
+   "fieldtype": "Section Break",
+   "label": "All Activities"
+  },
+  {
+   "fieldname": "all_activities_html",
+   "fieldtype": "HTML",
+   "label": "All Activities HTML"
   }
  ],
  "index_web_pages_for_search": 1,
