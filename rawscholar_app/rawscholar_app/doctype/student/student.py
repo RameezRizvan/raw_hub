@@ -49,7 +49,7 @@ class Student(Document):
 
     # qualifications
     @frappe.whitelist()
-    def add_qualification(self, qualification, cgpa, percentage, completion_year, specifics):
+    def add_qualification(self, qualification, cgpa, percentage, completion_year=None, specifics=None):
         self.append(
             "qualifications", {"qualification": qualification, "cgpa": cgpa, "percentage": percentage, "completion_year": completion_year, "specifics": specifics})
         self.save()
@@ -68,7 +68,7 @@ class Student(Document):
 
     @frappe.whitelist()
     def delete_qualifications(self, row_id):
-        for d in self.qualif ications:
+        for d in self.qualifications:
             if cstr(d.name) == row_id:
                 self.remove(d)
                 break

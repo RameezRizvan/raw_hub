@@ -12,22 +12,29 @@
             {% for(var i=0, l=qualifications.length; i<l; i++) { %}
                 <div class="comment-content p-3 row" name="{{ qualifications[i].name }}">
                     <div class="left-content">
-                        <div class="content qualification">
-                            Qualification : {{ qualifications[i].qualification }}
+                        <div class="content qualification_and_year">
+                            <div class="content qualification" style="display: inline;">
+                                {{ qualifications[i].qualification }}
+                            </div>
+                            (<div class="content completion_year" style="display: inline;">
+                                {{ qualifications[i].completion_year }}
+                            </div>)
                         </div>
-                        <div class="content completion_year">
-                            Year : {{ qualifications[i].completion_year }}
-                        </div>
+                        
                         <div class="content specifics">
-                            Specific : {{ qualifications[i].specifics }}
+                            {{ qualifications[i].specifics }}
                         </div>
                     </div>
                     <div class="right-content">
-                        <div class="content cgpa">
-                            CGPA : {{ qualifications[i].cgpa }}
+                        <div class="content cgpa" style="display: inline;">
+                            {{ qualifications[i].cgpa }} 
                         </div>
-                        <div class="content percentage">
-                            Percentage : {{ qualifications[i].percentage }}
+                        <div style="display: inline;">CGPA</div>
+                        <div>
+                        <div class="content percentage" style="display: inline;">
+                            {{ qualifications[i].percentage }}
+                        </div>
+                        <div style="display: inline;">%</div>
                         </div>
                     </div>
                     <div class="col-xs-1 text-right">

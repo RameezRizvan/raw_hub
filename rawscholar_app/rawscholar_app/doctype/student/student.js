@@ -335,6 +335,8 @@ frappe.ui.form.on("Student", {
     let specifics= $(row).find(".specifics").html();
 
     if (row_content) {
+      console.log(row_content)
+      console.log(cgpa)
       var d = new frappe.ui.Dialog({
         title: __("Edit Qualification"),
         fields: [
@@ -344,7 +346,7 @@ frappe.ui.form.on("Student", {
             fieldtype: "Link",
             options: "Qualification Type",
             reqd: 1,
-            default: row_content,
+            default: "10th",
           },
           {
             label: "CGPA",
