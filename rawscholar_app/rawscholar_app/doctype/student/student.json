@@ -18,6 +18,7 @@
   "email",
   "phone",
   "qualifications",
+  "custom_qualification_html",
   "passport_no",
   "amended_from",
   "notes_tab",
@@ -26,7 +27,11 @@
   "files_tab",
   "photo",
   "files",
-  "others"
+  "others",
+  "activities_tab",
+  "open_activities_html",
+  "all_activities_section",
+  "all_activities_html"
  ],
  "fields": [
   {
@@ -136,6 +141,7 @@
   {
    "fieldname": "qualifications",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "Qualifications",
    "options": "Qualification"
   },
@@ -143,6 +149,31 @@
    "fieldname": "notes_html",
    "fieldtype": "HTML",
    "label": "Notes HTML"
+  },
+  {
+   "fieldname": "activities_tab",
+   "fieldtype": "Tab Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "open_activities_html",
+   "fieldtype": "HTML",
+   "label": "Open Activities HTML"
+  },
+  {
+   "fieldname": "all_activities_section",
+   "fieldtype": "Section Break",
+   "label": "All Activities"
+  },
+  {
+   "fieldname": "all_activities_html",
+   "fieldtype": "HTML",
+   "label": "All Activities HTML"
+  },
+  {
+   "fieldname": "custom_qualification_html",
+   "fieldtype": "HTML",
+   "label": "qualification html"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -161,7 +192,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-25 10:23:05.059092",
+ "modified": "2024-01-31 06:54:26.155926",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
