@@ -14,27 +14,38 @@
                     <div class="left-content">
                         <div class="content qualification_and_year">
                             <div class="content qualification" style="display: inline;">
-                                {{ qualifications[i].qualification }}
+                                {{ qualifications[i].qualification.qualification }}
                             </div>
+                            {% if (qualifications[i].completion_year && qualifications[i].completion_year != 0) { %}
                             (<div class="content completion_year" style="display: inline;">
                                 {{ qualifications[i].completion_year }}
                             </div>)
+                            {% } %}
                         </div>
                         
+                        {% if (qualifications[i].specifics && qualifications[i].specifics != "") { %}
                         <div class="content specifics">
                             {{ qualifications[i].specifics }}
                         </div>
+                            {% } %}
+                       
                     </div>
                     <div class="right-content">
+                        {% if (qualifications[i].cgpa && qualifications[i].cgpa != 0) { %}
                         <div class="content cgpa" style="display: inline;">
                             {{ qualifications[i].cgpa }} 
                         </div>
                         <div style="display: inline;">CGPA</div>
+                        {% } %}
+                       
                         <div>
-                        <div class="content percentage" style="display: inline;">
-                            {{ qualifications[i].percentage }}
-                        </div>
-                        <div style="display: inline;">%</div>
+                            {% if (qualifications[i].percentage && qualifications[i].percentage != 0) { %}
+                            <div class="content percentage" style="display: inline;">
+                                {{ qualifications[i].percentage }}
+                            </div>
+                            <div style="display: inline;">%</div>
+                        {% } %}
+                       
                         </div>
                     </div>
                     <div class="col-xs-1 text-right">
