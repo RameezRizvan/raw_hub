@@ -19,7 +19,6 @@
   "phone",
   "qualifications",
   "passport_no",
-  "custom_qualification_html",
   "amended_from",
   "notes_tab",
   "notes",
@@ -141,7 +140,6 @@
   {
    "fieldname": "qualifications",
    "fieldtype": "Table",
-   "hidden": 1,
    "label": "Qualifications",
    "options": "Qualification"
   },
@@ -169,11 +167,6 @@
    "fieldname": "all_activities_html",
    "fieldtype": "HTML",
    "label": "All Activities HTML"
-  },
-  {
-   "fieldname": "custom_qualification_html",
-   "fieldtype": "HTML",
-   "label": "qualification html"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -184,15 +177,11 @@
    "table_fieldname": "Payment"
   },
   {
-   "link_doctype": "Task",
-   "link_fieldname": "Student"
-  },
-  {
    "link_doctype": "Application",
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-31 08:27:22.194096",
+ "modified": "2024-01-31 11:42:27.235062",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
