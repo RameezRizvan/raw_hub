@@ -18,8 +18,8 @@
   "email",
   "phone",
   "qualifications",
-  "custom_qualification_html",
   "passport_no",
+  "custom_qualification_html",
   "amended_from",
   "notes_tab",
   "notes",
@@ -192,7 +192,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-31 06:54:26.155926",
+ "modified": "2024-01-31 08:27:22.194096",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",

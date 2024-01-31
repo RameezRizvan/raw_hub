@@ -51,10 +51,9 @@ class Student(Document):
         self.save()
 
     @frappe.whitelist()
-    def edit_qualifications(self, qualification, cgpa, percentage, completion_year, specifics, row_id):
+    def edit_qualifications(self, cgpa, percentage, completion_year, specifics, row_id):
         for d in self.qualifications:
             if cstr(d.name) == row_id:
-                d.qualification = qualification
                 d.cgpa = cgpa
                 d.percentage = percentage
                 d.completion_year = completion_year

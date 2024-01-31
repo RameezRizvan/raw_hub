@@ -1,19 +1,12 @@
 <div class="qualification-section col-xs-12">
-	<div class="new-btn pb-3">
-		<button class="btn btn-sm small new-qualification-btn mr-1">
-			<svg class="icon icon-sm">
-				<use href="#icon-add"></use>
-			</svg>
-			{{ __("Add Qualification") }}
-		</button>
-	</div>
 	<div class="all-qualification">
         {% if (qualifications.length) { %}
+            <h5>Qualifications</h5>
             {% for(var i=0, l=qualifications.length; i<l; i++) { %}
                 <div class="comment-content p-3 row" name="{{ qualifications[i].name }}">
                     <div class="left-content">
                         <div class="content qualification_and_year">
-                            <div class="content qualification" style="display: inline;">
+                            <div class="content qualification font-weight-bold" style="display: inline;">
                                 {{ qualifications[i].qualification.qualification }}
                             </div>
                             {% if (qualifications[i].completion_year && qualifications[i].completion_year != 0) { %}
@@ -58,10 +51,6 @@
 					</div>
                 </div>
             {% } %}
-        {% } else { %}
-            <div class="no-activity text-muted pt-6">
-                {{ __("No Qualification") }}
-            </div>
         {% } %}
     </div>
     
