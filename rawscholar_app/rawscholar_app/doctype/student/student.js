@@ -47,7 +47,7 @@ frappe.ui.form.on("Student", {
       },
       callback: (r) => {
         if (!r.exc) {
-          var activities_html = frappe.render_template("activities", {
+          var activities_html = frappe.render_template("student_activities", {
             tasks: r.message.tasks,
             events: r.message.events,
           });
@@ -60,14 +60,32 @@ frappe.ui.form.on("Student", {
             .find(".completion-checkbox")
             .on("click", function () {
               frm.status_box = this;
-              frm.trigger("update_todo_status");
+              const d = frappe.msgprint({
+                title: __('Notification'),
+                message: __('Are you sure you want to proceed?'),
+                primary_action:{
+                    action(values) {          
+                      frm.trigger("update_todo_status");
+                      d.hide();
+                    }
+                }
+              });
             });
 
           $(".open-events")
             .find(".completion-checkbox")
             .on("click", function () {
               frm.status_box = this;
-              frm.trigger("update_event_status");
+              const d = frappe.msgprint({
+                title: __('Notification'),
+                message: __('Are you sure you want to proceed?'),
+                primary_action:{
+                    action(values) {          
+                      frm.trigger("update_event_status");
+                      d.hide();
+                    }
+                }
+              });
             });
           ``;
           frm.trigger("create_task");
@@ -83,7 +101,7 @@ frappe.ui.form.on("Student", {
       fields: ["qualification", "name"],
     });
 
-    let Qualification_html = frappe.render_template("Qualification", {
+    let student_qualification_html = frappe.render_template("student_qualification", {
       qualifications: qualifications.map((q) => ({
         ...q,
         qualification: linked_qual_types.find(
@@ -93,7 +111,7 @@ frappe.ui.form.on("Student", {
     });
     $(".qualification-section").remove();
 
-    $(Qualification_html).appendTo(
+    $(student_qualification_html).appendTo(
       frm.fields_dict["custom_qualification_html"].wrapper
     );
 
