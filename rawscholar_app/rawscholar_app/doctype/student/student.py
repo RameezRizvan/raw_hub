@@ -43,20 +43,15 @@ class Student(Document):
                 break
         self.save()
 
-
-
-
-
     # qualifications
     @frappe.whitelist()
     def add_qualification(self, qualification, cgpa, percentage, completion_year=None, specifics=None):
         self.append(
             "qualifications", {"qualification": qualification, "cgpa": cgpa, "percentage": percentage, "completion_year": completion_year, "specifics": specifics})
         self.save()
-        
 
     @frappe.whitelist()
-    def edit_qualifications(self, qualification,cgpa, percentage, completion_year, specifics, row_id):
+    def edit_qualifications(self, qualification, cgpa, percentage, completion_year, specifics, row_id):
         for d in self.qualifications:
             if cstr(d.name) == row_id:
                 d.qualification = qualification
@@ -74,7 +69,52 @@ class Student(Document):
                 break
         self.save()
 
+    @frappe.whitelist()
+    def get_open_activities(self, ref_doctype, ref_docname):
 
+        def get_open_todos(ref_doctype, ref_docname):
+            return frappe.get_all(
+                "ToDo",
+                filters={"reference_type": ref_doctype,
+                         "reference_name": ref_docname, "status": "Open"},
+                fields=[
+                    "name",
+                    "description",
+                    "allocated_to",
+                    "date",
+                ],
+            )
+
+        def get_open_events(ref_doctype, ref_docname):
+            event = frappe.qb.DocType("Event")
+            event_link = frappe.qb.DocType("Event Participants")
+
+            query = (
+                frappe.qb.from_(event)
+                .join(event_link)
+                .on(event_link.parent == event.name)
+                .select(
+                    event.name,
+                    event.subject,
+                    event.event_category,
+                    event.starts_on,
+                    event.ends_on,
+                    event.description,
+                )
+                .where(
+                    (event_link.reference_doctype == ref_doctype)
+                    & (event_link.reference_docname == ref_docname)
+                    & (event.status == "Open")
+                )
+            )
+            data = query.run(as_dict=True)
+
+            return data
+
+        tasks = get_open_todos(ref_doctype, ref_docname)
+        events = get_open_events(ref_doctype, ref_docname)
+
+        return {"tasks": tasks, "events": events}
 
     @staticmethod
     def get_query(doctype, txt, searchfield, start, page_len, filters):
@@ -84,75 +124,3 @@ class Student(Document):
           FROM `Payment`
           WHERE Student = '{filters.get('Student')}'
         """
-
-
-
-# Activities-*******
-
-    # @frappe.whitelist()
-    # def get_open_activities(ref_doctype, ref_docname):
-    #     tasks = get_open_todos(ref_doctype, ref_docname)
-    #     events = get_open_events(ref_doctype, ref_docname)
-
-    #     return {"tasks": tasks, "events": events}
-
-
-    # def get_open_todos(ref_doctype, ref_docname):
-    #     return frappe.get_all(
-    #         "ToDo",
-    #         filters={"reference_type": ref_doctype, "reference_name": ref_docname, "status": "Open"},
-    #         fields=[
-    #             "name",
-    #             "description",
-    #             "allocated_to",
-    #             "date",
-    #         ],
-    #     )
-
-
-    # def get_open_events(ref_doctype, ref_docname):
-    #     event = frappe.qb.DocType("Event")
-    #     event_link = frappe.qb.DocType("Event Participants")
-
-    #     query = (
-    #         frappe.qb.from_(event)
-    #         .join(event_link)
-    #         .on(event_link.parent == event.name)
-    #         .select(
-    #             event.name,
-    #             event.subject,
-    #             event.event_category,
-    #             event.starts_on,
-    #             event.ends_on,
-    #             event.description,
-    #         )
-    #         .where(
-    #             (event_link.reference_doctype == ref_doctype)
-    #             & (event_link.reference_docname == ref_docname)
-    #             & (event.status == "Open")
-    #         )
-    #     )
-    #     data = query.run(as_dict=True)
-
-    #     return data
-
-
-    # def open_leads_opportunities_based_on_todays_event():
-    #     event = frappe.qb.DocType("Event")
-    #     event_link = frappe.qb.DocType("Event Participants")
-
-    #     query = (
-    #         frappe.qb.from_(event)
-    #         .join(event_link)
-    #         .on(event_link.parent == event.name)
-    #         .select(event_link.reference_doctype, event_link.reference_docname)
-    #         .where(
-    #             (event_link.reference_doctype.isin(["Lead", "Opportunity"]))
-    #             & (event.status == "Open")
-    #             & (functions.Date(event.starts_on) == today())
-    #         )
-    #     )
-    #     data = query.run(as_dict=True)
-
-    #     for d in data:
-    #         frappe.db.set_value(d.reference_doctype, d.reference_docname, "status", "Open")
