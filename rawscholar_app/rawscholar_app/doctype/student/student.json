@@ -26,11 +26,11 @@
   "files_tab",
   "photo",
   "files",
-  "others",
   "activities_tab",
   "open_activities_html",
   "all_activities_section",
-  "all_activities_html"
+  "all_activities_html",
+  "others"
  ],
  "fields": [
   {
@@ -129,7 +129,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nRegistered\nInterested\nNot Interested\nNot Responding\nCounselling Ongoing\nApplication Processing\nFuture Follow Up\nCall Later\nRepetitive Lead"
+   "options": "Open\nRegistered\nInterested\nNot Interested\nNot Responding\nCounselling Ongoing\nApplication Processing\nFuture Follow Up\nCall Later\nRepetitive Lead\nPoor Profile"
   },
   {
    "fieldname": "source",
@@ -181,7 +181,7 @@
    "link_fieldname": "Student"
   }
  ],
- "modified": "2024-01-31 11:42:27.235062",
+ "modified": "2024-03-26 12:42:35.776656",
  "modified_by": "Administrator",
  "module": "Rawscholar App",
  "name": "Student",
