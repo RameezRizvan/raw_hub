@@ -95,6 +95,9 @@ frappe.ui.form.on("Student", {
     });
 
     //<<<<<<<<<<<< END of Activities >>>>>>>>>>>>>>>>
+
+    // <<<<<<<<<<<<< Qualification >>>>>>>>>>>>>
+
     let qualifications = frm.doc.qualifications || [];
     const linked_qual_types = await frappe.db.get_list("Qualification Type", {
       filters: { name: ["in", qualifications.map((q) => q.qualification)] },
@@ -134,6 +137,173 @@ frappe.ui.form.on("Student", {
         frm.trigger("delete_qualification");
       });
   },
+  
+  add_qualification: function (frm) {
+    var d = new frappe.ui.Dialog({
+      title: __("Add a Qualification"),
+      fields: [
+        {
+          label: "Qualification",
+          fieldname: "qualification",
+          fieldtype: "Link",
+          options: "Qualification Type",
+          reqd: 1,
+        },
+        {
+          label: "Specifics",
+          fieldname: "specifics",
+          fieldtype: "Data",
+        },
+        {
+          label: "CGPA",
+          fieldname: "cgpa",
+          fieldtype: "Float",
+        },
+        {
+          label: "Percentage (%)",
+          fieldname: "percentage",
+          fieldtype: "Float",
+        },
+        {
+          label: "Completion Year",
+          fieldname: "completion_year",
+          fieldtype: "Autocomplete",
+          options: Array.from(
+            { length: new Date().getFullYear() - 1950 + 1 },
+            (_, i) => 1950 + i
+          ).join("\n"),
+        },
+      ],
+      primary_action: function () {
+        var data = d.get_values();
+        frappe.call({
+          method: "add_qualification",
+          doc: frm.doc,
+          args: {
+            qualification: data.qualification,
+            cgpa: data.cgpa,
+            percentage: data.percentage,
+            completion_year: data.completion_year,
+            specifics: data.specifics,
+          },
+          freeze: true,
+          callback: function (r) {
+            if (!r.exc) {
+              frm.refresh();
+            }
+            d.hide();
+          },
+        });
+      },
+      primary_action_label: __("Add"),
+    });
+    d.show();
+  },
+
+  edit_qualification: function (frm) {
+    const edit_btn = frm.edit_btn;
+    let row = $(edit_btn).closest(".comment-content");
+    let row_id = row.attr("name");
+    let qualification_level = $(row).find(".qualification").html()?.trim();
+    let cgpa = $(row).find(".cgpa").html()?.trim();
+    let percentage = $(row).find(".percentage").html()?.trim();
+    let completion_year = $(row).find(".completion_year").html()?.trim();
+    let specifics = $(row).find(".specifics").html()?.trim();
+    
+    var d = new frappe.ui.Dialog({
+      title: __("Edit Qualification"),
+      fields: [
+        {
+          label: "Qualification",
+          fieldname: "qualification",
+          fieldtype: "Data",
+          options: "Qualification Type",
+          reqd: 1,
+          default: qualification_level,
+          read_only: 1,
+        },
+        {
+          label: "Specifics",
+          fieldname: "specifics",
+          fieldtype: "Data",
+          default: specifics,
+        },
+        {
+          label: "CGPA",
+          fieldname: "cgpa",
+          fieldtype: "Float",
+          precision: "2",
+          default: +cgpa,
+        },
+        {
+          label: "Percentage (%)",
+          fieldname: "percentage",
+          fieldtype: "Float",
+          precision: "2",
+          default: +percentage,
+        },
+        {
+          label: "Completion Year",
+          fieldname: "completion_year",
+          fieldtype: "Autocomplete",
+          options: Array.from(
+            { length: new Date().getFullYear() - 1950 + 1 },
+            (_, i) => 1950 + i
+          ).join("\n"),
+          default: completion_year,
+        },
+      ],
+      primary_action: function () {
+        var data = d.get_values();
+        frappe.call({
+          method: "edit_qualifications",
+          doc: frm.doc,
+          args: {
+            cgpa: data.cgpa,
+            percentage: data.percentage,
+            completion_year: data.completion_year,
+            specifics: data.specifics,
+            row_id: row_id,
+          },
+          freeze: true,
+          callback: function (r) {
+            if (!r.exc) {
+              frm.refresh();
+              d.hide();
+            }
+          },
+        });
+      },
+      primary_action_label: __("Done"),
+    });
+    d.show();
+    console.log(cur_dialog);
+  },
+
+  delete_qualification(frm) {
+    console.log("delete");
+    var delete_btn = frm.delete_btn;
+    let row_id = $(delete_btn).closest(".comment-content").attr("name");
+    frappe.call({
+      method: "delete_qualifications",
+      doc: frm.doc,
+      args: {
+        row_id: row_id,
+      },
+      freeze: true,
+      callback: function (r) {
+        if (!r.exc) {
+          frm.refresh();
+        }
+      },
+    });
+  },
+
+
+  // <<<<<<<<<<<<< Qualification End >>>>>>>>>>>>>
+
+
+  // <<<<<<<<<<<<< Notes >>>>>>>>>>>>>
 
   add_note: function (frm) {
     var d = new frappe.ui.Dialog({
@@ -229,166 +399,13 @@ frappe.ui.form.on("Student", {
       },
     });
   },
+  // <<<<<<<<<<<<< Notes End >>>>>>>>>>>>>
 
-  add_qualification: function (frm) {
-    var d = new frappe.ui.Dialog({
-      title: __("Add a Qualification"),
-      fields: [
-        {
-          label: "Qualification",
-          fieldname: "qualification",
-          fieldtype: "Link",
-          options: "Qualification Type",
-          reqd: 1,
-        },
-        {
-          label: "Specifics",
-          fieldname: "specifics",
-          fieldtype: "Data",
-        },
-        {
-          label: "CGPA",
-          fieldname: "cgpa",
-          fieldtype: "Float",
-        },
-        {
-          label: "Percentage (%)",
-          fieldname: "percentage",
-          fieldtype: "Float",
-        },
-        {
-          label: "Completion Year",
-          fieldname: "completion_year",
-          fieldtype: "Autocomplete",
-          options: Array.from(
-            { length: new Date().getFullYear() - 1950 + 1 },
-            (_, i) => 1950 + i
-          ).join("\n"),
-        },
-      ],
-      primary_action: function () {
-        var data = d.get_values();
-        frappe.call({
-          method: "add_qualification",
-          doc: frm.doc,
-          args: {
-            qualification: data.qualification,
-            cgpa: data.cgpa,
-            percentage: data.percentage,
-            completion_year: data.completion_year,
-            specifics: data.specifics,
-          },
-          freeze: true,
-          callback: function (r) {
-            if (!r.exc) {
-              frm.refresh();
-            }
-            d.hide();
-          },
-        });
-      },
-      primary_action_label: __("Add"),
-    });
-    d.show();
-  },
+  
 
-  edit_qualification: function (frm) {
-    const edit_btn = frm.edit_btn;
-    let row = $(edit_btn).closest(".comment-content");
-    let row_id = row.attr("name");
-    let qualification_level = $(row).find(".qualification").html()?.trim();
-    let cgpa = $(row).find(".cgpa").html()?.trim();
-    let percentage = $(row).find(".percentage").html()?.trim();
-    let completion_year = $(row).find(".completion_year").html()?.trim();
-    let specifics = $(row).find(".specifics").html()?.trim();
-    var d = new frappe.ui.Dialog({
-      title: __("Edit Qualification"),
-      fields: [
-        {
-          label: "Qualification",
-          fieldname: "qualification",
-          fieldtype: "Data",
-          options: "Qualification Type",
-          reqd: 1,
-          default: qualification_level,
-          read_only: 1,
-        },
-        {
-          label: "Specifics",
-          fieldname: "specifics",
-          fieldtype: "Data",
-          default: specifics,
-        },
-        {
-          label: "CGPA",
-          fieldname: "cgpa",
-          fieldtype: "Float",
-          precision: "2",
-          default: +cgpa,
-        },
-        {
-          label: "Percentage (%)",
-          fieldname: "percentage",
-          fieldtype: "Float",
-          precision: "2",
-          default: +percentage,
-        },
-        {
-          label: "Completion Year",
-          fieldname: "completion_year",
-          fieldtype: "Autocomplete",
-          options: Array.from(
-            { length: new Date().getFullYear() - 1950 + 1 },
-            (_, i) => 1950 + i
-          ).join("\n"),
-          default: completion_year,
-        },
-      ],
-      primary_action: function () {
-        var data = d.get_values();
-        frappe.call({
-          method: "edit_qualifications",
-          doc: frm.doc,
-          args: {
-            cgpa: data.cgpa,
-            percentage: data.percentage,
-            completion_year: data.completion_year,
-            specifics: data.specifics,
-            row_id: row_id,
-          },
-          freeze: true,
-          callback: function (r) {
-            if (!r.exc) {
-              frm.refresh();
-              d.hide();
-            }
-          },
-        });
-      },
-      primary_action_label: __("Done"),
-    });
-    d.show();
-    console.log(cur_dialog);
-  },
 
-  delete_qualification(frm) {
-    console.log("delete");
-    var delete_btn = frm.delete_btn;
-    let row_id = $(delete_btn).closest(".comment-content").attr("name");
-    frappe.call({
-      method: "delete_qualifications",
-      doc: frm.doc,
-      args: {
-        row_id: row_id,
-      },
-      freeze: true,
-      callback: function (r) {
-        if (!r.exc) {
-          frm.refresh();
-        }
-      },
-    });
-  },
+
+  // <<<<<<<<<<<<< Task >>>>>>>>>>>>>
   create_task(frm) {
     let _create_task = () => {
       const args = {
